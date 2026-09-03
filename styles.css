@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-blue: #4a6ca0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #222;
+}
+
+body {
+    background-image: url("DSCN0227.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.glass-pane {
+    backdrop-filter: blur(0px);
+    background-color: #ffffffaa;
+    z-index: -1;
+    width: 100;
+    padding: 0 10vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header, nav {
+    width: 100%;
+    text-align: center;
+    padding: 1vh 3vw;
+    border-bottom: #222 1px solid;
+}
+
+header div {
+    line-height: 1px;
+}
+
+.fade-in {
+    font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: .4em;
+    font-size: .55rem;
+
+    opacity: 0;
+    animation: fade-in 2s ease-in forwards;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        filter: blur(3px);
+    }
+    25% {
+        opacity: 0;
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.title-name {
+    font-size: 2.65rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    padding-top: 0;
+}
+
+nav div {
+    width: 25%;
+    border-left: #222 1px solid;
+    text-align: center;
+}
+
+.nav-first {
+    border-left: none;
+}
+
+.spacer {
+    height: 3px;
+}
+
+main {
+    height: 95vh;
+    width: 100;
+}
+
+.notice {
+    background-color: #FEFF81CD;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1vh 0;
+}
+
+.notice p {
+    margin: 0.5vh;
+}
