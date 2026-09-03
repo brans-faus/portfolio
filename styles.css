@@ -47,8 +47,8 @@ header div {
 
 .fade-in {
     font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: .3em;
-    font-size: .55rem;
+    letter-spacing: .4em;
+    font-size: 1.75vw;
 
     opacity: 0;
     animation: fade-in 2s ease-in forwards;
@@ -69,7 +69,7 @@ header div {
 }
 
 .title-name {
-    font-size: 2.33rem;
+    font-size: 8vw;
     font-weight: bold;
 }
 
