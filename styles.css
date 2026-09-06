@@ -17,12 +17,23 @@ body, html {
     color: var(--color-black-detail);
 }
 
-body {
+body::before {
+    content: "";
+    position: fixed;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+
     background-image: url("DSCN0227.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    z-index: -1;
+}
+
+body {
+    
 }
 
 .glass-pane {
@@ -98,11 +109,6 @@ nav div {
 
 .spacer {
     height: 3px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .notice {
