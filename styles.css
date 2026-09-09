@@ -3,18 +3,26 @@ html {
 }
 
 :root {
-    --color-blue-main:       #4a6ca0;
-    --color-white-glass:     #ffffffaa;
-    --color-black-detail:    #222;
-    --color-yellow-notice:   #FEFF81CD;
-    --color-purple-accent:   #6600ea;
+    --color-main:       #4a6ca0;
+    --color-glass:     #ffffffaa;
+    --color-detail:    #222;
+    --color-notice:   #FEFF81CD;
+    --color-accent:   #6600ea;
+}
+
+.dark-theme {
+    --color-main:       #64a1fc;
+    --color-glass:      #222222aa;
+    --color-detail:     whitesmoke;
+    --color-notice:     #75752fcd;
+    --color-accent:     #64a1fc;
 }
 
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    color: var(--color-black-detail);
+    color: var(--color-detail);
 }
 
 body::before {
@@ -33,11 +41,11 @@ body::before {
 }
 
 body {
-    
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .glass-pane {
-    background-color: var(--color-white-glass);
+    background-color: var(--color-glass);
     z-index: -1;
     width: 100;
     padding-left: 10vw;
@@ -55,7 +63,7 @@ header, nav {
     width: 100%;
     text-align: center;
     padding: 1vh 3vw;
-    border-bottom: var(--color-black-detail) 1px solid;
+    border-bottom: var(--color-detail) 1px solid;
 }
 
 header div {
@@ -112,7 +120,7 @@ nav div {
 }
 
 .notice {
-    background-color: var(--color-yellow-notice);
+    background-color: var(--color-notice);
     text-align: center;
     padding: 1vh 0;
 }
@@ -128,7 +136,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-purple-accent);
+    color: var(--color-accent);
 }
 
 main {
@@ -146,7 +154,7 @@ main {
 .role-desc, .res-section {
     width: 100%;
     text-align: left;
-    text-shadow: var(--color-white-glass) 1px 1px;
+    text-shadow: var(--color-glass) 1px 1px;
 }
 
 #skills {
@@ -154,7 +162,7 @@ main {
 }
 
 h4 {
-    text-decoration: underline var(--color-purple-accent) 2px;
+    text-decoration: underline var(--color-accent) 2px;
     text-shadow: none;
     text-underline-offset: 5px;
 }
@@ -163,12 +171,12 @@ hr {
     width: 61.8%;
     border: none;
     height: 1px;
-    background-color: var(--color-black-detail);
+    background-color: var(--color-detail);
     margin-left: 0;
 }
 
 .loc {
-    color: var(--color-blue-main);
+    color: var(--color-main);
 }
 
 aside {
@@ -243,4 +251,17 @@ footer {
             "skills education"
             "skills experience";
     }
+}
+
+.toggle-btn {
+    border-radius: 7px;
+    border: var(--color-detail) 1px solid;
+    color: var(--color-detail);
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--color-glass);
+
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
 }
